@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>动态加载出页面</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="./js/jquery.js"></script>
+<style>
+	body{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	#search{
+		text-align: center;
+	}
+	#tip{
+		text-align: center;
+	}
+</style>
+<script>
+	// var txt = 1;
+	// var t;
+	// function timeMsg(){
+	// 	txt = txt + 1;
+	// 	var time = document.getElementById("time");
+	// 	time.innerHTML = txt;
+	// 	// $("#time").text(txt);
+	// 	t = setTimeout(timeMsg(),1000);
+	// }
+	$(function(){
+		// $.ajax({
+		// 	url:"/cgi-bin/readAllTeam.py",
+		// 	type:"POST",
+		// 	data:{data1:"1"},
+		// 	success:function(response){
+		// 		if(response == 1){
+		// 			setTimeout(function(){$("#tip").text("球队读取成功")},2000);
+		// 			// $("#tip").text("球队读取成功");
+		// 		}else{
+		// 			alert("球队读取失败");
+		// 		}
+		// 	}
+		// })
+		
+		$("button").click(function(){
+			var teamName = $("input").val();
+			$("#main").html("");
+			// $.ajax({
+			// 	url:"/cgi-bin/receiveTeamName.py",
+			// 	type:"POST",
+			// 	data:{teamName:teamName},
+			// 	success:function(response){
+			// 		if(response == 0){
+			// 			alert("你输入的球队不存在,请重新输入");
+			// 		}else{
+			// 			$("#tip").text("正在搜索...");
+			// 			setTimeout(function(){
+			// 				$("#main").load("teamData.html");
+			// 			},2000);
+			// 			$.ajax({
+			// 				url:"/cgi-bin/readTeamInfo.py",
+			// 				type:"POST",
+			// 				data:{data2:"1"},
+			// 				success:function(response){
+			// 					if(response == 1){
+			// 						setTimeout(function(){
+			// 							$("#tip").text("已找到你喜欢的球队,正在呈现资料");
+			// 						},3000);
+			// 						// $("#main").load("teamData.html");
+			// 					}else{
+			// 						alert("系统故障,请稍后再试");
+			// 					}
+			// 				}
+			// 			})
+			// 		}
+			// 	}
+			// })
+			$.ajax({
+				url:"/cgi-bin/pythonDemoCgiTest.py",
+				type:"POST",
+				data: {teamName:teamName},
+				beforeSend:function(){
+					$("#tip").text("正在搜索...");
+				},
+				success:function(response){
+					// clearTimeout(t);
+					if(response == 0){
+						alert("你输入的球队不存在,请重新输入");
+						$("#tip").text("");	
+					}else{
+						$("#tip").text("");
+						// alert("查询成功");
+						$("#main").load("teamData.html");
+					}
+				}
+			})
+		})
+	})
+</script>
+</head>
+    <body>
+    	<div id="search">
+    		<br />
+    		<br />
+    		<input type="text" value="" placeholder="请输入你喜欢的球队" /><button>搜索</button>
+    	</div>
+    	<div>
+    		<p id="tip"></p>
+    	</div>
+    	<div id="main">
+    		
+    	</div>
+    </body>
+</html>

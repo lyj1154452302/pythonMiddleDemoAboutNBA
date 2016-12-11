@@ -1,0 +1,180 @@
+#collapse{
+	width: 800px;
+}
+#collapse{
+  	padding-top:2px; 
+  	padding-left: 30px;
+}
+#nav{
+	margin: 0;
+}
+#search{
+	/*position: absolute;*/
+	/*margin: 0 auto;*/
+	width: 800px;
+  /*text-align: center;*/
+  	margin-top: 10px;
+  	margin-left: 380px;
+	/*z-index: 101;*/
+  /*top:350px;*/
+  /*left:400px;*/
+}
+#searchInput{
+    width: 300px;
+}
+.carousel-inner img{
+	z-index: 100;
+}
+#westMenu{
+	width: 297px;
+	text-align: center;
+	margin: 0;
+}
+#westMenu li{
+	height: 28px;
+}
+#westMenu ul{
+	width: 297px;
+	background-color: #222;
+}
+#westMenu li a{
+	color: #969696;
+}
+#westMenu li a:hover{
+	background-color: #222;
+	color:white;
+}
+#eastMenu{
+	width: 290px;
+	text-align: center;
+	margin: 0;
+}
+#eastMenu ul{
+	width: 290px;
+	background-color: #222;
+}
+#eastMenu li{
+	height: 28px;
+}
+#eastMenu li a{
+	color: #969696;
+}
+#eastMenu li a:hover{
+	background-color: #222;
+	color:white;
+}
+.teamNameCn{
+	width: 120px;
+	float: left;
+	text-align: center;
+}
+.teamNameEn{
+	margin-left: 20px;
+	width: 145px;
+	text-align: left;
+}
+#title{
+  	margin-left: 280px;
+}
+#title a{
+	text-decoration: none;
+	color: #9d9d9d;
+}
+#title a:hover{
+	color: white;
+}
+#tip{
+	text-align: center;
+}
+#topTab{
+	width: 900px;
+	padding-left: 50px;
+	margin-bottom: 20px;
+}
+/*.introtab{
+	padding-left: 30px;
+	padding-top: 10px;
+}*/
+.dataBoard{
+	/*margin-left: -30px;*/
+	position: absolute;
+	top: 1205px;
+	left: 200px;
+}
+.kingImg{
+	position: absolute;
+	top: 1250px;
+	left: 950px;
+	text-align: center;
+}
+.basicInfoTab{
+	width: 370px;
+	float: left;
+}
+#topInfo{
+	width: 740px;
+	margin-left: 35px;
+}
+#topInfo li{
+	width: 370px;
+	text-align: center;
+}
+#topTab .tab-content{
+	height: 185px;
+}
+.title{
+	width: 80px;
+	float: left;
+	/*display: inline-block;*/
+	text-align: right;
+}
+#boss{
+	display: inline-block;
+	width: 180px;
+}
+.recentGameTab{
+	width: 370px;
+	float: left;
+	padding-left: 80px;
+}
+.recentGameTab span{
+	margin-left: 15px;
+}
+.recentGameTab h5{
+	/*text-align: center;*/
+	padding-left: 80px;
+	margin-bottom: 10px;
+}
+#middleInfo{
+	margin-left: -20px;
+}
+table{
+	margin-left: 40px;
+}
+table th{
+	text-align: left;
+}
+/*table tr{
+	padding-bottom: 15px;
+}*/
+#tablePlayer{
+	padding-left: 100px;
+}
+#middleInfo h4{
+	text-align: center;
+}
+#bottomTab{
+	width: 900px;
+	padding-left: 50px;
+}
+#bottomInfo li{
+	width: 123px;
+	text-align: center;
+}
+#bottomInfo{
+	width: 738px;
+	margin-left: 35px;
+}
+.basicInfoItem{
+	margin-left: 20px;
+}

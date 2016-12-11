@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>NBA Team-Player datacenter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="./js/readBasicInfo.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="./js/scoreBoard.js"></script>
+<script type="text/javascript" src="./js/threeBoard.js"></script>
+<script type="text/javascript" src="./js/reboundBoard.js"></script>
+<script type="text/javascript" src="./js/asistBoard.js"></script>
+<script type="text/javascript" src="./js/stealBoard.js"></script>
+<script type="text/javascript" src="./js/blockShotBoard.js"></script>
+<script type="text/javascript" src="./js/dataKing.js"></script> -->
+<script type="text/javascript" src="./js/index.js"></script>
+<link rel="stylesheet" href="./css/index.css">
+</head>
+    <body>
+    	<nav class="navbar navbar-inverse" role="navigation" id="nav">
+			<ul class="nav navbar-nav">
+				<li class="dropdown" id="westMenu">
+					<a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						West
+					</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						<li role="presentation" >
+							<a role="menuitem" tabindex="-1" href="#" alt="spurs" class="menuTeam">
+								<span class="teamNameCn">圣安东尼奥马刺队</span>
+								<span class="teamNameEn">Spurs</span>
+							</a>
+						</li>
+						<li role="presentation" >
+							<a role="menuitem" tabindex="-1" href="#" alt="Grizzlies" class="menuTeam">
+								<span class="teamNameCn">孟菲斯灰熊队</span>
+								<span class="teamNameEn">Grizzlies</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" alt="Mavericks" class="menuTeam">
+								<span class="teamNameCn">达拉斯小牛队</span>
+								<span class="teamNameEn">Mavericks</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" alt="Rockets" class="menuTeam">
+								<span class="teamNameCn">休斯顿火箭队</span>
+								<span class="teamNameEn">Rockets</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" alt="Pelicans" class="menuTeam">
+								<span class="teamNameCn">新奥尔良鹈鹕队</span>
+								<span class="teamNameEn">Pelicans</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" alt="Timberwolves" class="menuTeam">
+								<span class="teamNameCn">明尼苏达森林狼队</span>
+								<span class="teamNameEn">Timberwolves</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" alt="Nuggets" class="menuTeam">
+								<span class="teamNameCn">丹佛掘金队</span>
+								<span class="teamNameEn">Nuggets</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" alt="Jazz" class="menuTeam">
+								<span class="teamNameCn">犹他爵士队</span>
+								<span class="teamNameEn">Jazz</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" alt="Trail Blazers" class="menuTeam">
+								<span class="teamNameCn">波特兰开拓者队</span>
+								<span class="teamNameEn">Trail Blazers</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" alt="Thunder" class="menuTeam">
+								<span class="teamNameCn">俄克拉荷马城雷霆队</span>
+								<span class="teamNameEn">Thunder</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" alt="Kings" class="menuTeam">
+								<span class="teamNameCn">萨克拉门托国王队</span>
+								<span class="teamNameEn">Kings</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">菲尼克斯太阳队</span>
+								<span class="teamNameEn">Suns</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">洛杉矶湖人队</span>
+								<span class="teamNameEn">Lakers</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">洛杉矶快船队</span>
+								<span class="teamNameEn">Clippers</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">金州勇士队</span>
+								<span class="teamNameEn">Warriors</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- <ul class="nav navbar-nav" id="title">
+				<li>
+					<a href="index.html"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						NBA Team-Player datacenter
+					</a>
+				</li>
+			</ul> -->
+			<span class="navbar-text" id="title">
+				<a href="index.html" role="button" aria-haspopup="true" aria-expanded="false">NBA Team-Player datacenter
+				</a>
+			</span>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown" id="eastMenu">
+					<a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						East
+					</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						<li role="presentation" >
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">迈阿密热队</span>
+								<span class="teamNameEn">Heat</span>
+							</a>
+						</li>
+						<li role="presentation" >
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">奥兰多魔术队</span>
+								<span class="teamNameEn">Magic</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">亚特兰大老鹰队</span>
+								<span class="teamNameEn">Hawks</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">华盛顿奇才队</span>
+								<span class="teamNameEn">Wizards</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">夏洛特黄蜂队</span>
+								<span class="teamNameEn">Hornets</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">底特律活塞队</span>
+								<span class="teamNameEn">Pistons</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">印第安纳步行者队</span>
+								<span class="teamNameEn">Pacers</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">克里夫兰骑士队</span>
+								<span class="teamNameEn">Cavaliers</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">芝加哥公牛队</span>
+								<span class="teamNameEn">Bulls</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">密尔沃基雄鹿队</span>
+								<span class="teamNameEn">Bucks</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">波士顿凯尔特人队</span>
+								<span class="teamNameEn">Celtics</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">费城76人队</span>
+								<span class="teamNameEn">76ers</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">纽约尼克斯队</span>
+								<span class="teamNameEn">Knicks</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">布鲁克林篮网队</span>
+								<span class="teamNameEn">Nets</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#" class="menuTeam">
+								<span class="teamNameCn">多伦多猛龙队</span>
+								<span class="teamNameEn">Raptors</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+    	</nav>
+    	<div class="container"  id="collapse">
+    		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">		
+		        <!-- <ol class="carousel-indicators">
+		            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		        </ol> -->
+		        <div class="carousel-inner" role="listbox" id="collapseImg">				
+		            
+		        </div>
+		        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		            <span class="sr-only">Previous</span>
+		        </a>
+		        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		            <span class="sr-only">Next</span>
+		        </a>
+		    </div>
+    	</div>
+    	<div class="container">
+    		<div id="search">
+		        <form class="form-inline" method="post" role="form" id="searchForm">
+		           	<input type="text" id="searchInput" class="form-control" name="email" placeholder="Enter your like team..." required="">
+		            <input type="submit" id="searchBtn" class="btn btn-primary" value="Search">
+		        </form>
+		        <!-- <div class="clearfix"></div> -->
+			    <br />
+    		</div>
+    		<div>
+		    	<p id="tip"></p>
+		    </div>
+		</div>
+		
+		<!-- tab li中a的href需要# + 对应区块的id名称，否则无法对应上且可能有冲突 -->
+		<div class="container" id="topTab">
+			<div id="topInfo">
+				<ul class="nav nav-tabs">
+			        <li class="active"><a href="#tab-basicInfo" role="tab" data-toggle="tab">队伍基本信息</a></li>
+			        <li><a href="#tab-recentGame" role="tab" data-toggle="tab">近期赛程</a></li>
+			    </ul>
+
+			    <div class="tab-content">
+			        <div class="tab-pane active" id="tab-basicInfo">
+			            <div class="row introtab">
+			            	<br />
+			            	<div class="basicInfoTab">
+			            		<p>
+			                        <span class="title">队名 : </span><span id="teamName" class="basicInfoItem">1</span>
+			                    </p>
+			                    <p>
+			                        <span class="title">主教练 : </span><span id="headCoach" class="basicInfoItem">1</span>
+			                    </p>
+			                    <p>
+			                        <span class="title">城市 : </span><span id="city" class="basicInfoItem">1</span>
+			                    </p>
+			                    <p>
+			                        <span class="title">分区 : </span><span id="area" class="basicInfoItem">1</span>
+			                    </p>
+			                    <p>
+			                        <span class="title">老板 : </span><span id="boss" class="basicInfoItem">1</span>
+			                    </p>
+			            	</div>
+			            	<div class="basicInfoTab">
+			            		<p>
+			                        <span class="title">球场 : </span><span id="court" class="basicInfoItem">1</span>
+			                    </p>
+			                    <p>
+			                        <span class="title">进入NBA : </span><span id="startNBA" class="basicInfoItem">1</span>
+			                    </p>
+			                    <p>
+			                        <span class="title">总冠军数 : </span><span id="championCount" class="basicInfoItem">1</span>
+			                    </p>
+			                    <p>
+			                        <span class="title">当前排名 : </span><span id="currentRank" class="basicInfoItem">1</span>
+			                    </p>
+			            	</div>
+			            </div>
+			        </div>
+			        <div class="tab-pane" id="tab-recentGame">
+			            <div class="row introtab">
+			            	<div class="recentGameTab" id="lastFiveGames">
+			            		<h5>上五场</h5>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+			            	</div>
+			            	<div class="recentGameTab" id="nextFiveGames">
+			            		<h5>下五场</h5>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+		                        <p>
+		                            <span class="date"></span><span class="data"></span>
+		                        </p>
+			            	</div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<div id="middleInfo">
+                <h4>球员场均数据表</h4>
+                <table width="800px;" border="0" cellspacing="15">
+                    <tr>
+                        <th id="tablePlayer">球员</th>
+                        <th>三分命中率</th>
+                        <th>总篮板</th>
+                        <th>助攻</th>
+                        <th>抢断</th>
+                        <th>盖帽</th>
+                        <th>得分</th>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                </table>
+            </div>
+		</div>
+		<div class="container" id="bottomTab">
+			<!-- 数据表 -->
+			<div id="bottomInfo">
+				<ul class="nav nav-tabs">
+			        <li class="active">
+			        	<a href="#tab-scoreBoard" role="tab" data-toggle="tab">
+			        		得分统计
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="#tab-reboundBoard" role="tab" data-toggle="tab">
+			        		篮板统计
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="#tab-asistBoard" role="tab" data-toggle="tab">
+			        		助攻统计
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="#tab-stealBoard" role="tab" data-toggle="tab">
+			        		抢断统计
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="#tab-blockShotBoard" role="tab" data-toggle="tab">
+			        		盖帽统计
+			        	</a>
+			        </li>
+			        <li>
+			        	<a href="#tab-threeBoard" role="tab" data-toggle="tab">
+			        		三分统计
+			        	</a>
+			        </li>
+			    </ul>
+
+			    <div class="tab-content">
+			        <div class="tab-pane active" id="tab-scoreBoard">
+			            <div class="row introtab">
+			            	<div class="row introtab">
+				            	<div id="scoreBoard" class="dataBoard">
+		                
+				                </div>
+				                <div id="scoreKing" class="kingImg">
+				     
+				                </div>
+				            </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane" id="tab-reboundBoard">
+			            <div class="row introtab">
+			            	<div id="reboundBoard" class="dataBoard">
+                    
+			                </div>
+			                <div id="reboundKing" class="kingImg">
+			     
+			                </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane" id="tab-asistBoard">
+			            <div class="row introtab" >
+			            	<div id="asistBoard" class="dataBoard">
+                    
+			                </div>
+			                <div id="asistKing" class="kingImg">
+			     
+			                </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane" id="tab-stealBoard">
+			            <div class="row introtab">
+			            	<div id="stealBoard" class="dataBoard">
+                    
+			                </div>
+			                <div id="stealKing" class="kingImg">
+			     
+			                </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane" id="tab-blockShotBoard">
+			            <div class="row introtab">
+			            	<div id="blockShotBoard" class="dataBoard">
+                    
+			                </div>
+			                <div id="blockShotKing" class="kingImg">
+			     
+			                </div>
+			            </div>
+			        </div>
+			        <div class="tab-pane" id="tab-threeBoard">
+			            <div class="row introtab">
+			            	<div id="threeBoard" class="dataBoard">
+                    
+			                </div>
+			                <div id="threeKing" class="kingImg">
+			     
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+    </body>
+</html>

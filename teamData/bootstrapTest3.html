@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<style>
+#collapse{
+  padding-top:5px; 
+}
+#nav{
+	margin: 0;
+}
+#input{
+	/*position: absolute;*/
+	/*margin: 0 auto;*/
+	width: 800px;
+  /*text-align: center;*/
+  margin-top: 10px;
+  margin-left: 380px;
+	/*z-index: 101;*/
+  /*top:350px;*/
+  /*left:400px;*/
+}
+#searchInput{
+  width: 300px;
+}
+.carousel-inner img{
+	z-index: 100;
+}
+#collapse{
+  width: 800px;
+}
+#title{
+  padding-left: 570px;
+}
+</style>
+
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- Carousel  -->
+<nav class="navbar navbar-inverse" role="navigation" id="nav">
+  <div class="container-fluid">
+    <div class="navbar-header" id="title">
+      <p class="navbar-text">NBA Team-Player datacenter</p>
+    </div>
+  </div>
+</nav>
+<div class="container" id="collapse">
+	  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- Button -->
+  			
+  
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+		
+            <div class="item active">
+                <img src="./images/OKC.jpg" alt="...">
+                <div class="carousel-caption">
+                    Hello
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/NICKS.jpg" alt="...">
+                <div class="carousel-caption">
+                    How are you
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/NETS.jpg" alt="...">
+                <div class="carousel-caption">
+                    Fine
+                </div>
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div class="container">
+  <div id="input">
+      <div class="col-md-8 input-group-lg">
+          <form class="form-inline" role="form">
+            <input type="text" id="searchInput" class="form-control" name="email" placeholder="Enter your like team..." required="">
+            <input type="submit" id="searchBtn" class="btn btn-primary" value="Search">
+          </form>
+          <div class="clearfix"></div>
+      </div>
+  </div>
+</div>
+</body>
+</html>
